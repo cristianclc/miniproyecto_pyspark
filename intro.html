@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to your Jupyter Book &#8212; My sample book</title>
+    <title>Análisis Predictivo de Riesgo Crediticio con Machine Learning: Un Enfoque Comparativo entre Scikit-learn y PySpark &#8212; My sample book</title>
   
   
   
@@ -57,9 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Miniproyecto PySpark" href="prueba.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -142,7 +145,7 @@
     
   
 
-<a class="navbar-brand logo" href="pyspark.html">
+<a class="navbar-brand logo" href="#">
   
   
   
@@ -173,13 +176,17 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="pyspark.html">
-                    Miniproyecto Pyspark
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Análisis Predictivo de Riesgo Crediticio con Machine Learning: Un Enfoque Comparativo entre Scikit-learn y PySpark
                 </a>
             </li>
         </ul>
-        
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="prueba.html"><strong>Miniproyecto PySpark</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusiones.html"><strong>Conclusiones del Proyecto: Análisis Comparativo</strong></a></li>
+</ul>
+
     </div>
 </nav></div>
     </div>
@@ -350,7 +357,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -361,11 +370,35 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to your Jupyter Book</h1>
+    <h1>Análisis Predictivo de Riesgo Crediticio con Machine Learning: Un Enfoque Comparativo entre Scikit-learn y PySpark</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-del-proyecto"><strong>Contexto del Proyecto</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-de-datos-lending-club-dataset"><strong>Base de Datos: Lending Club Dataset</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origen-y-relevancia"><strong>Origen y Relevancia</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-principales"><strong>Características Principales</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-clave-analizadas"><strong>Variables Clave Analizadas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-demograficas-y-de-solicitud"><strong>Variables Demográficas y de Solicitud</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-de-historial-crediticio"><strong>Variables de Historial Crediticio</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-de-resultado"><strong>Variables de Resultado</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-del-analisis"><strong>Objetivos del Análisis</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primario"><strong>Primario</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#secundarios"><strong>Secundarios</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -375,13 +408,75 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Link to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="analisis-predictivo-de-riesgo-crediticio-con-machine-learning-un-enfoque-comparativo-entre-scikit-learn-y-pyspark">
+<h1><strong>Análisis Predictivo de Riesgo Crediticio con Machine Learning: Un Enfoque Comparativo entre Scikit-learn y PySpark</strong><a class="headerlink" href="#analisis-predictivo-de-riesgo-crediticio-con-machine-learning-un-enfoque-comparativo-entre-scikit-learn-y-pyspark" title="Link to this heading">#</a></h1>
+<section id="contexto-del-proyecto">
+<h2><strong>Contexto del Proyecto</strong><a class="headerlink" href="#contexto-del-proyecto" title="Link to this heading">#</a></h2>
+<p>En la industria financiera moderna, la evaluación precisa del riesgo crediticio representa uno de los desafíos más críticos para instituciones prestamistas. La capacidad de predecir la probabilidad de incumplimiento de un préstamo no solo impacta directamente en la rentabilidad, sino también en la estabilidad del sistema financiero. Este proyecto aborda este desafío mediante la implementación y comparación de modelos de machine learning para la predicción de impagos, utilizando una de las bases de datos de préstamos más comprehensivas disponibles públicamente.</p>
+</section>
+<section id="base-de-datos-lending-club-dataset">
+<h2><strong>Base de Datos: Lending Club Dataset</strong><a class="headerlink" href="#base-de-datos-lending-club-dataset" title="Link to this heading">#</a></h2>
+<section id="origen-y-relevancia">
+<h3><strong>Origen y Relevancia</strong><a class="headerlink" href="#origen-y-relevancia" title="Link to this heading">#</a></h3>
+<p>El dataset de Lending Club constituye un benchmark estándar en la industria fintech, conteniendo información histórica de más de <strong>2.2 millones de préstamos</strong> originados entre 2007 y 2020. Lending Club, como plataforma de préstamos peer-to-peer líder, proporciona este dataset que se ha convertido en un recurso fundamental para la investigación en riesgo crediticio.</p>
+</section>
+<section id="caracteristicas-principales">
+<h3><strong>Características Principales</strong><a class="headerlink" href="#caracteristicas-principales" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Volumen:</strong> 2,260,701 registros de préstamos.</p></li>
+<li><p><strong>Variables:</strong> 151 características iniciales por préstamo.</p></li>
+<li><p><strong>Período:</strong> Datos históricos acumulados por más de una década.</p></li>
+<li><p><strong>Completitud:</strong> Información crediticia verificada y estructurada.</p></li>
+</ul>
+</section>
+</section>
+<section id="variables-clave-analizadas">
+<h2><strong>Variables Clave Analizadas</strong><a class="headerlink" href="#variables-clave-analizadas" title="Link to this heading">#</a></h2>
+<section id="variables-demograficas-y-de-solicitud">
+<h3><strong>Variables Demográficas y de Solicitud</strong><a class="headerlink" href="#variables-demograficas-y-de-solicitud" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">loan_amnt</span></code>: Monto del préstamo solicitado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">term</span></code>: Plazo del préstamo (36/60 meses)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int_rate</span></code>: Tasa de interés asignada.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grade</span></code>: Grado crediticio asignado (A-G).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">purpose</span></code>: Propósito del préstamo.</p></li>
+</ul>
+</section>
+<section id="variables-de-historial-crediticio">
+<h3><strong>Variables de Historial Crediticio</strong><a class="headerlink" href="#variables-de-historial-crediticio" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fico_range_low/high</span></code>: Rango de score FICO del solicitante.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">annual_inc</span></code>: Ingreso anual del solicitante.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dti</span></code>: Ratio deuda-ingreso.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revol_util</span></code>: Porcentaje de utilización de crédito revolving.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inq_last_6mths</span></code>: Consultas crediticias recientes.</p></li>
+</ul>
+</section>
+<section id="variables-de-resultado">
+<h3><strong>Variables de Resultado</strong><a class="headerlink" href="#variables-de-resultado" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">loan_status</span></code>: Estado final del préstamo</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code>: Variable objetivo binaria (1=impago, 0=pago exitoso).</p></li>
+</ul>
+</section>
+</section>
+<section id="objetivos-del-analisis">
+<h2><strong>Objetivos del Análisis</strong><a class="headerlink" href="#objetivos-del-analisis" title="Link to this heading">#</a></h2>
+<section id="primario">
+<h3><strong>Primario</strong><a class="headerlink" href="#primario" title="Link to this heading">#</a></h3>
+<p>Desarrollar un modelo predictivo capaz de identificar préstamos con alta probabilidad de default utilizando técnicas de machine learning, optimizando el trade-off entre detección temprana de riesgo y minimización de falsas alarmas.</p>
+</section>
+<section id="secundarios">
+<h3><strong>Secundarios</strong><a class="headerlink" href="#secundarios" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Comparar el rendimiento de implementaciones en Scikit-learn vs PySpark.</p></li>
+<li><p>Identificar las variables más predictivas del riesgo crediticio.</p></li>
+<li><p>Evaluar estrategias para manejar el desbalance inherente en datos crediticios.</p></li>
+</ul>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -414,12 +509,52 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="right-next"
+       href="prueba.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Miniproyecto PySpark</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-del-proyecto"><strong>Contexto del Proyecto</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-de-datos-lending-club-dataset"><strong>Base de Datos: Lending Club Dataset</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origen-y-relevancia"><strong>Origen y Relevancia</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristicas-principales"><strong>Características Principales</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-clave-analizadas"><strong>Variables Clave Analizadas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-demograficas-y-de-solicitud"><strong>Variables Demográficas y de Solicitud</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-de-historial-crediticio"><strong>Variables de Historial Crediticio</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-de-resultado"><strong>Variables de Resultado</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-del-analisis"><strong>Objetivos del Análisis</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primario"><strong>Primario</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#secundarios"><strong>Secundarios</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
