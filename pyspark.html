@@ -373,7 +373,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Miniproyecto Pyspark</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importar-librerias"><strong>Importar Librerías</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectura-de-datos"><strong>Lectura de Datos</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verificacion-de-la-integridad-de-los-datos"><strong>Verificación de la integridad de los datos</strong></a></li>
@@ -407,15 +406,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-de-hiperparametros-scikit-learn"><strong>Tuning de hiperparámetros Scikit-learn</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelado-con-scikit-learn-y-metricas"><strong>Modelado con scikit-learn y métricas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelado-con-scikit-learn-y-metricas"><strong>Modelado con scikit-learn y métricas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lime-scikit-learn-y-feature-importance"><strong>Lime Scikit-learn y feature importance</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observamos-una-instancia-clasificada-erroneamente"><strong>Observamos una instancia clasificada erroneamente</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aqui-interpreta-algo-david"><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lime-scikit-learn-y-feature-importance"><strong>Lime Scikit-learn y feature importance</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observamos-una-instancia-clasificada-erroneamente"><strong>Observamos una instancia clasificada erroneamente</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-en-pyspark"><strong>Implementación en Pyspark</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creacion-de-la-sesion-spark-y-carga-de-dataset"><strong>Creación de la Sesión Spark y carga de Dataset</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccionamos-las-variables-usadas-con-scikit-learn"><strong>Seleccionamos las variables usadas con Scikit-Learn</strong></a></li>
@@ -429,10 +424,6 @@ document.write(`
 </ul>
 </li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em></a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -1966,12 +1957,8 @@ F1-score: 0.2945675433701225
 <img alt="_images/2395e244d2298a170127f970303dd711dbb7f3c6dffd684cb2049677c8b0394f.png" src="_images/2395e244d2298a170127f970303dd711dbb7f3c6dffd684cb2049677c8b0394f.png" />
 </div>
 </div>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="aqui-interpreta-algo-david">
-<h1><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em><a class="headerlink" href="#aqui-interpreta-algo-david" title="Link to this heading">#</a></h1>
 <section id="lime-scikit-learn-y-feature-importance">
-<h2><strong>Lime Scikit-learn y feature importance</strong><a class="headerlink" href="#lime-scikit-learn-y-feature-importance" title="Link to this heading">#</a></h2>
+<h3><strong>Lime Scikit-learn y feature importance</strong><a class="headerlink" href="#lime-scikit-learn-y-feature-importance" title="Link to this heading">#</a></h3>
 <p>La implementación de LIME (Local Interpretable Model-agnostic Explanations) para modelos de Scikit-learn, junto con el análisis de feature importance, son componentes esenciales para comprender y validar las predicciones del modelo de machine learning.</p>
 <p>La Feature Importance ofrece una visión general de las variables más influyentes en el modelo completo, identificando qué características tienen mayor peso en las predicciones agregadas.</p>
 <div class="cell docutils container">
@@ -2119,7 +2106,7 @@ F1-score: 0.2945675433701225
 <p><code class="docutils literal notranslate"><span class="pre">Grade</span> <span class="pre">F</span></code> (6.27%), <code class="docutils literal notranslate"><span class="pre">Grade</span> <span class="pre">C</span></code> (4.07%), <code class="docutils literal notranslate"><span class="pre">Grade</span> <span class="pre">G</span></code> (1.99%): Completan la jerarquía</p>
 </section>
 <section id="observamos-una-instancia-clasificada-erroneamente">
-<h2><strong>Observamos una instancia clasificada erroneamente</strong><a class="headerlink" href="#observamos-una-instancia-clasificada-erroneamente" title="Link to this heading">#</a></h2>
+<h3><strong>Observamos una instancia clasificada erroneamente</strong><a class="headerlink" href="#observamos-una-instancia-clasificada-erroneamente" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">125000</span>
@@ -39256,8 +39243,6 @@ Real: 0
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id3">
-<h1><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em><a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
 <section id="implementacion-en-pyspark">
 <h2><strong>Implementación en Pyspark</strong><a class="headerlink" href="#implementacion-en-pyspark" title="Link to this heading">#</a></h2>
 <p>Renombramos la variable target de <code class="docutils literal notranslate"><span class="pre">default</span></code> a <code class="docutils literal notranslate"><span class="pre">label</span></code>, esta modificación previene errores y se alinea con la convención de Pyspark que utiliza ‘label’ para designar la variable dependiente.</p>
@@ -39600,9 +39585,6 @@ Accuracy: 0.9887
 </section>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id4">
-<h1><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em><a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -39650,7 +39632,6 @@ Accuracy: 0.9887
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Miniproyecto Pyspark</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importar-librerias"><strong>Importar Librerías</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lectura-de-datos"><strong>Lectura de Datos</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verificacion-de-la-integridad-de-los-datos"><strong>Verificación de la integridad de los datos</strong></a></li>
@@ -39684,15 +39665,11 @@ Accuracy: 0.9887
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-de-hiperparametros-scikit-learn"><strong>Tuning de hiperparámetros Scikit-learn</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelado-con-scikit-learn-y-metricas"><strong>Modelado con scikit-learn y métricas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelado-con-scikit-learn-y-metricas"><strong>Modelado con scikit-learn y métricas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lime-scikit-learn-y-feature-importance"><strong>Lime Scikit-learn y feature importance</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observamos-una-instancia-clasificada-erroneamente"><strong>Observamos una instancia clasificada erroneamente</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aqui-interpreta-algo-david"><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lime-scikit-learn-y-feature-importance"><strong>Lime Scikit-learn y feature importance</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observamos-una-instancia-clasificada-erroneamente"><strong>Observamos una instancia clasificada erroneamente</strong></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-en-pyspark"><strong>Implementación en Pyspark</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creacion-de-la-sesion-spark-y-carga-de-dataset"><strong>Creación de la Sesión Spark y carga de Dataset</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccionamos-las-variables-usadas-con-scikit-learn"><strong>Seleccionamos las variables usadas con Scikit-Learn</strong></a></li>
@@ -39706,10 +39683,6 @@ Accuracy: 0.9887
 </ul>
 </li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><em><strong>AQUI INTERPRETA ALGO DAVID</strong></em></a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
