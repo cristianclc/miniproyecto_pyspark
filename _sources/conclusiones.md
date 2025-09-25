@@ -3,7 +3,7 @@
 ## **Rendimiento Computacional: ¿Qué entorno fue más rápido?**
 
 **PySpark demostró superioridad en escalabilidad:**
-- **Reducción del 15% en tiempo de entrenamiento** (34 vs 40 minutos) para el mismo grid search.
+- **Reducción del 15% en tiempo de entrenamiento** (32 vs 41 minutos) para el mismo grid search.
 - **Ventaja más significativa en datasets grandes** (>1GB) donde el procesamiento distribuido muestra su verdadero valor.
 - **Scikit-learn fue más eficiente en subsets pequeños** debido a la sobrecarga de inicialización de Spark.
 
@@ -15,8 +15,8 @@
 
 | Métrica | Scikit-learn | PySpark | Mejora |
 |---------|--------------|---------|---------|
-| **AUC-ROC** | 0.6985 | 0.7160 | +2.5% |
-| **Accuracy** | 0.6217 | 0.6490 | +4.4% |
+| **AUC-ROC** | 0.6985 | 0.7163 | +2.5% |
+| **Accuracy** | 0.6217 | 0.6481 | +4.4% |
 | **F1-Score** | 0.2959 | 0.3112 | +5.2% |
 
 **Factores clave de la mejora:**
@@ -54,6 +54,6 @@
 
 ##  **Conclusión General**
 
-**PySpark representa la opción más robusta para implementaciones productivas** a escala, mientras que **Scikit-learn mantiene ventajas en desarrollo y prototipado**. La **ligera superioridad predictiva de PySpark** (AUC 0.716 vs 0.699) justifica su complejidad operativa en entornos adecuados.
+**PySpark representa la opción más robusta para implementaciones productivas** a escala, mientras que **Scikit-learn mantiene ventajas en desarrollo y prototipado**. La **ligera superioridad predictiva de PySpark** (AUC 0.716 vs 0.698) justifica su complejidad operativa en entornos adecuados.
 
 **La combinación ideal** sería utilizar Scikit-learn para desarrollo inicial y PySpark para implementación final, con LIME como herramienta permanente de interpretabilidad y validación del modelo.

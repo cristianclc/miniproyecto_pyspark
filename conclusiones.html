@@ -402,7 +402,7 @@ document.write(`
 <h2><strong>Rendimiento Computacional: ¿Qué entorno fue más rápido?</strong><a class="headerlink" href="#rendimiento-computacional-que-entorno-fue-mas-rapido" title="Link to this heading">#</a></h2>
 <p><strong>PySpark demostró superioridad en escalabilidad:</strong></p>
 <ul class="simple">
-<li><p><strong>Reducción del 15% en tiempo de entrenamiento</strong> (34 vs 40 minutos) para el mismo grid search.</p></li>
+<li><p><strong>Reducción del 15% en tiempo de entrenamiento</strong> (32 vs 41 minutos) para el mismo grid search.</p></li>
 <li><p><strong>Ventaja más significativa en datasets grandes</strong> (&gt;1GB) donde el procesamiento distribuido muestra su verdadero valor.</p></li>
 <li><p><strong>Scikit-learn fue más eficiente en subsets pequeños</strong> debido a la sobrecarga de inicialización de Spark.</p></li>
 </ul>
@@ -422,12 +422,12 @@ document.write(`
 <tbody>
 <tr class="row-even"><td><p><strong>AUC-ROC</strong></p></td>
 <td><p>0.6985</p></td>
-<td><p>0.7160</p></td>
+<td><p>0.7163</p></td>
 <td><p>+2.5%</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Accuracy</strong></p></td>
 <td><p>0.6217</p></td>
-<td><p>0.6490</p></td>
+<td><p>0.6481</p></td>
 <td><p>+4.4%</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>F1-Score</strong></p></td>
@@ -484,7 +484,7 @@ document.write(`
 </section>
 <section id="conclusion-general">
 <h2><strong>Conclusión General</strong><a class="headerlink" href="#conclusion-general" title="Link to this heading">#</a></h2>
-<p><strong>PySpark representa la opción más robusta para implementaciones productivas</strong> a escala, mientras que <strong>Scikit-learn mantiene ventajas en desarrollo y prototipado</strong>. La <strong>ligera superioridad predictiva de PySpark</strong> (AUC 0.716 vs 0.699) justifica su complejidad operativa en entornos adecuados.</p>
+<p><strong>PySpark representa la opción más robusta para implementaciones productivas</strong> a escala, mientras que <strong>Scikit-learn mantiene ventajas en desarrollo y prototipado</strong>. La <strong>ligera superioridad predictiva de PySpark</strong> (AUC 0.716 vs 0.698) justifica su complejidad operativa en entornos adecuados.</p>
 <p><strong>La combinación ideal</strong> sería utilizar Scikit-learn para desarrollo inicial y PySpark para implementación final, con LIME como herramienta permanente de interpretabilidad y validación del modelo.</p>
 </section>
 </section>
